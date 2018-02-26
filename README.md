@@ -11,7 +11,19 @@ RYU: cd /home/ubuntu/ryu && ./bin/ryu-manager --verbose ryu/app/simple_switch_13
 ### topology/: included files are related to topology discovery  
 # Basic functions for controller  
 傳送(L2Forwarding)->接收switch到controller的封包(EventOFPPacketIn)->輸出controller到switch的封包(OFPPacketOut)  
-->對應進入的封包產生rule->送rule給switch
+->對應進入的封包產生rule->送rule給switch  
 
-http://sdnhub.org/tutorials/ryu/  
-simple_switch_13解析:https://osrg.github.io/ryu-book/zh_tw/html/switching_hub.html  
+ex:  
+```python
+@set_ev_cls(ofp_event.EventOFPSwitchFeatures, CONFIG_DISPATCHER)    
+def switch_features_handler(self, ev):    
+    datapath = ev.msg.datapath    
+    ofproto = datapath.ofproto    
+    parser = datapath.ofproto_parser    
+```    
+>ev.msg: 儲存對應事件的OpenFlow訊息類別實體    
+>底下有msg.datapath, datapath當中常用的有: id(DPID), ofproto, ofproto_parser(parser)    
+
+http://sdnhub.org/tutorials/ryu/  
+simple_switch_13解析:https://osrg.github.io/ryu-book/zh_tw/html/switching_hub.html  
+
