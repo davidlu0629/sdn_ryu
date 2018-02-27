@@ -25,5 +25,15 @@ def switch_features_handler(self, ev):
 >底下有msg.datapath, datapath當中常用的有: id(DPID), ofproto, ofproto_parser(parser)    
 
 http://sdnhub.org/tutorials/ryu/  
-simple_switch_13解析:https://osrg.github.io/ryu-book/zh_tw/html/switching_hub.html  
+simple_switch_13解析:https://osrg.github.io/ryu-book/zh_tw/html/switching_hub.html   
+  常用指令:    
+  mininet: sudo mn --topo single,3 --mac --controller remote --switch ovsk    
+  controller: cd /home/ubuntu/ryu && ./bin/ryu-manager --verbose ryu/app/simple_switch_13.py    
+  other: sudo ovs-vsctl set bridge s1 protocols=OpenFlow13    
+  sudo wireshark &    
+  in mininet:   
+  to inspect the rule in the switch(s1): ovs-ofctl -O openflow13 dump-flows s1    
+  check packet get in the host(h1): tcpdump -en -i h1-eth0
+  
+  
 
