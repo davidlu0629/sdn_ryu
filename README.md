@@ -24,9 +24,11 @@ def switch_features_handler(self, ev):
 >ev.msg: 儲存對應事件的OpenFlow訊息類別實體    
 >底下有msg.datapath, datapath當中常用的有: id(DPID), ofproto, ofproto_parser(parser)    
 
-http://sdnhub.org/tutorials/ryu/  
-simple_switch_13解析:https://osrg.github.io/ryu-book/zh_tw/html/switching_hub.html   
-  常用指令:    
+http://sdnhub.org/tutorials/ryu/    
+simple_switch_13解析:https://osrg.github.io/ryu-book/zh_tw/html/switching_hub.html     
+實作教學:https://github.com/OSE-Lab/Learning-SDN/tree/master/Controller/Ryu/ShortestPath    
+
+  常用指令:    
   mininet: sudo mn --topo single,3 --mac --controller remote --switch ovsk    
   controller: cd /home/ubuntu/ryu && ./bin/ryu-manager --verbose ryu/app/simple_switch_13.py    
   other: sudo ovs-vsctl set bridge s1 protocols=OpenFlow13    
