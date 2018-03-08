@@ -32,7 +32,7 @@ mininet basic:https://github.com/OSE-Lab/Learning-SDN/tree/master/Mininet/Walkth
 
   常用指令:    
   mininet: sudo mn --topo single,3 --mac --controller remote --switch ovsk    
-  (in ./mininet/custom folder)sudo mn --custom 5s2h.py --topo=mytopo --controller remote --switch ovsk -x     
+  (in ./mininet/custom folder)sudo mn --custom 5s2h.py --topo=mytopo --controller remote --switch ovsk -x    
   controller: cd /home/ubuntu/ryu && ./bin/ryu-manager --verbose ryu/app/simple_switch_13.py --observe-links    
   other: sudo ovs-vsctl set bridge s1 protocols=OpenFlow13    
   sudo wireshark &    
