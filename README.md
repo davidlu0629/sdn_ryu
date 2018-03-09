@@ -27,7 +27,9 @@ def switch_features_handler(self, ev):
 http://sdnhub.org/tutorials/ryu/    
 simple_switch_13解析:https://osrg.github.io/ryu-book/zh_tw/html/switching_hub.html    
 實作教學:https://github.com/OSE-Lab/Learning-SDN/tree/master/Controller/Ryu/ShortestPath    
-mininet basic:https://github.com/OSE-Lab/Learning-SDN/tree/master/Mininet/Walkthrough    
+mininet basic:https://github.com/OSE-Lab/Learning-SDN/tree/master/Mininet/Walkthrough      
+http://csie.nqu.edu.tw/smallko/sdn/ryu_sp13.htm    
+
 
 
   常用指令:    
